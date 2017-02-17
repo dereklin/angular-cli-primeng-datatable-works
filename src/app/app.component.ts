@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  public testData;
+  constructor() {
+    this.testData = [
+      {name: 'a'},
+      {name: 'b'}
+    ];
+    
+    setTimeout(() => {
+      this.testData = [
+        {name: 'c'},
+        {name: 'd'}
+      ];
+    }, 500);
+  }
 }
